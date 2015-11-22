@@ -86,9 +86,13 @@
       #phoenix-rising section #posts .post .img-container {
         background: #662d91;
         width: 27.5%;
-        height: 100%; }
+        height: 100%;
+        margin-right: 25px; }
         #phoenix-rising section #posts .post .img-container img {
-          width: 100%; }
+          width: 100%;
+          height: auto; }
+      #phoenix-rising section #posts .post .title {
+        margin-top: 25px; }
       #phoenix-rising section #posts .post .description {
         background: #662d91;
         width: 72.5%;

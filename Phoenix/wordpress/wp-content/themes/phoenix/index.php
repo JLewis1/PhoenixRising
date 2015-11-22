@@ -64,7 +64,7 @@
 			?>
 
 			<div <?php post_class($alt);?>>
-				<a href="<?php the_permalink();?>"><?php the_title()?></a>
+				<a class="title" href="<?php the_permalink();?>"><?php the_title()?></a>
 				By <?php echo get_the_author_link();?>
 				<?php 
 					if ( has_post_thumbnail() ) {
