@@ -66,9 +66,14 @@
 			<div <?php post_class($alt);?>>
 				<a href="<?php the_permalink();?>"><?php the_title()?></a>
 				By <?php echo get_the_author_link();?>
-				if ( has_post_thumbnail() ) {
-					the_post_thumbnail();
-				} 
+				<?php 
+					if ( has_post_thumbnail() ) {
+						$large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
+						echo '<div class="img-container"><a href="' . $large_image_url[0] . '" title="' . the_title_attribute( 'echo=0' ) . '">';
+						the_post_thumbnail( 'thumbnail' );
+						echo '</a></div>';
+					}
+				?>
 				<?php the_content();?>
 				<div class="clear"></div>
 			</div>
