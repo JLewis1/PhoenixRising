@@ -3,33 +3,29 @@
 	<div id="slideshow-container">
 		<div id="slideshow-frame">
 			<div class="active-slide">
-				<div class="slide"><img src="<?php bloginfo('template_directory'); ?>/img/slideshow_img.jpg"></div>
-				<div class="slide"><img src="<?php bloginfo('template_directory'); ?>/img/slideshow_img.jpg"></div>
-				<div class="slide"><img src="<?php bloginfo('template_directory'); ?>/img/slideshow_img.jpg"></div>
-				<div class="slide"><img src="<?php bloginfo('template_directory'); ?>/img/slideshow_img.jpg"></div>
-				<div class="slide"><img src="<?php bloginfo('template_directory'); ?>/img/slideshow_img.jpg"></div>
-				<div class="slide"><img src="<?php bloginfo('template_directory'); ?>/img/slideshow_img.jpg"></div>
-				<div class="slide"><img src="<?php bloginfo('template_directory'); ?>/img/slideshow_img.jpg"></div>
-				<div class="slide"><img src="<?php bloginfo('template_directory'); ?>/img/slideshow_img.jpg"></div>
-				<div class="slide"><img src="<?php bloginfo('template_directory'); ?>/img/slideshow_img.jpg"></div>
-				<div class="slide"><img src="<?php bloginfo('template_directory'); ?>/img/slideshow_img.jpg"></div>
-				<div class="slide"><img src="<?php bloginfo('template_directory'); ?>/img/slideshow_img.jpg"></div>
-				<div class="slide"><img src="<?php bloginfo('template_directory'); ?>/img/slideshow_img.jpg"></div>
+				<?php while(have_posts()): the_post(); ?>
+					<div class="slide">
+					<?php 
+						if ( has_post_thumbnail() ) {
+							$large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
+							the_post_thumbnail( 'thumbnail' );
+						}
+					?>
+					</div>
+				<?php endwhile;?>
 			</div>
 			
 			<div class="strip">
-				<div class="slide"><img src="<?php bloginfo('template_directory'); ?>/img/slideshow_img.jpg"></div>
-				<div class="slide"><img src="<?php bloginfo('template_directory'); ?>/img/slideshow_img.jpg"></div>
-				<div class="slide"><img src="<?php bloginfo('template_directory'); ?>/img/slideshow_img.jpg"></div>
-				<div class="slide"><img src="<?php bloginfo('template_directory'); ?>/img/slideshow_img.jpg"></div>
-				<div class="slide"><img src="<?php bloginfo('template_directory'); ?>/img/slideshow_img.jpg"></div>
-				<div class="slide"><img src="<?php bloginfo('template_directory'); ?>/img/slideshow_img.jpg"></div>
-				<div class="slide"><img src="<?php bloginfo('template_directory'); ?>/img/slideshow_img.jpg"></div>
-				<div class="slide"><img src="<?php bloginfo('template_directory'); ?>/img/slideshow_img.jpg"></div>
-				<div class="slide"><img src="<?php bloginfo('template_directory'); ?>/img/slideshow_img.jpg"></div>
-				<div class="slide"><img src="<?php bloginfo('template_directory'); ?>/img/slideshow_img.jpg"></div>
-				<div class="slide"><img src="<?php bloginfo('template_directory'); ?>/img/slideshow_img.jpg"></div>
-				<div class="slide"><img src="<?php bloginfo('template_directory'); ?>/img/slideshow_img.jpg"></div>
+			<?php while(have_posts()): the_post(); ?>
+				<div class="slide">
+				<?php 
+					if ( has_post_thumbnail() ) {
+						$large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
+						the_post_thumbnail( 'thumbnail' );
+					}
+				?>
+				</div>
+			<?php endwhile;?>
 			</div>
 		</div>
 		<div class="clear"></div>
@@ -38,18 +34,16 @@
 		<div id="slideshow-frame">
 			<div class="active-slide"><img src="<?php bloginfo('template_directory'); ?>/img/slideshow_img.jpg"></div>
 			<div class="strip">
-				<div class="slide"><img src="<?php bloginfo('template_directory'); ?>/img/slideshow_img.jpg"></div>
-				<div class="slide"><img src="<?php bloginfo('template_directory'); ?>/img/slideshow_img.jpg"></div>
-				<div class="slide"><img src="<?php bloginfo('template_directory'); ?>/img/slideshow_img.jpg"></div>
-				<div class="slide"><img src="<?php bloginfo('template_directory'); ?>/img/slideshow_img.jpg"></div>
-				<div class="slide"><img src="<?php bloginfo('template_directory'); ?>/img/slideshow_img.jpg"></div>
-				<div class="slide"><img src="<?php bloginfo('template_directory'); ?>/img/slideshow_img.jpg"></div>
-				<div class="slide"><img src="<?php bloginfo('template_directory'); ?>/img/slideshow_img.jpg"></div>
-				<div class="slide"><img src="<?php bloginfo('template_directory'); ?>/img/slideshow_img.jpg"></div>
-				<div class="slide"><img src="<?php bloginfo('template_directory'); ?>/img/slideshow_img.jpg"></div>
-				<div class="slide"><img src="<?php bloginfo('template_directory'); ?>/img/slideshow_img.jpg"></div>
-				<div class="slide"><img src="<?php bloginfo('template_directory'); ?>/img/slideshow_img.jpg"></div>
-				<div class="slide"><img src="<?php bloginfo('template_directory'); ?>/img/slideshow_img.jpg"></div>
+			<?php while(have_posts()): the_post(); ?>
+				<div class="slide">
+				<?php 
+					if ( has_post_thumbnail() ) {
+						$large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
+						the_post_thumbnail( 'thumbnail' );
+					}
+				?>
+				</div>
+			<?php endwhile;?>
 			</div>
 		</div>
 		<div class="clear"></div>

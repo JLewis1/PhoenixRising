@@ -42,9 +42,20 @@
 				left: 33%
 				top: 130px	
 				
-			.strip, .active-slide
+			.strip
 				width: 910px
-				
+			.active-slide
+				width: 478px
+				.slide
+					width: 478px
+					height: 329px
+					overflow: hidden
+					-webkit-border-radius: 22px
+					-moz-border-radius: 22px
+					border-radius: 22px
+					img
+						width: 478px !important
+						height: 329px
 			.strip
 				float: left
 				margin-top: 65px
@@ -68,6 +79,7 @@
 					height: 232px
 					img
 						width: 100%
+						height: 100%
 		#slideshow-container.mobile	
 			display: none
 		#posts
