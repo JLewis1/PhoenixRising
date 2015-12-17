@@ -9,6 +9,7 @@
 						if ( has_post_thumbnail() ) {
 							$large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
 							the_post_thumbnail( 'thumbnail' );
+							
 						}
 					?>
 					</div>
