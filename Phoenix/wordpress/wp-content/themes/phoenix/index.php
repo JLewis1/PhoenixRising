@@ -5,6 +5,7 @@
 			<div class="active-slide">
 				<?php while(have_posts()): the_post(); ?>
 					<div class="slide">
+					<a class="title" href="<?php the_permalink();?>">
 					<?php 
 						if ( has_post_thumbnail() ) {
 							$large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
@@ -12,6 +13,7 @@
 							
 						}
 					?>
+					</a>
 					</div>
 				<?php endwhile;?>
 			</div>
@@ -37,12 +39,14 @@
 			<div class="strip">
 			<?php while(have_posts()): the_post(); ?>
 				<div class="slide">
+				<a class="title" href="<?php the_permalink();?>">
 				<?php 
 					if ( has_post_thumbnail() ) {
 						$large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
 						the_post_thumbnail( 'thumbnail' );
 					}
 				?>
+				</a>
 				</div>
 			<?php endwhile;?>
 			</div>
